@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAINAM FERRO ALLOYS</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/OnlyLogo.jpeg">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./productsFilter.css" />
+</head>
+
+<body>
+  <!-- Animated Header -->
+  <div class="animated-header">
+    <div class="animated-line"></div>
+  </div>
+
+  <!-- Social Header -->
+  <div class="social-header">
+    <div class="container">
+      <div class="d-flex justify-content-end">
+        <div class="container d-flex gap-2">
+          <img src="./images/IAF.jpeg" alt="JSA" class="trademark-icon" />
+          <img src="./images/CE.jpeg" alt="JSA" class="trademark-icon" />
+          <img src="./images/EGAC.jpeg" alt="JSA" class="trademark-icon" />
+          <img src="./images/MSME.jpg" alt="JSA" class="trademark-icon" />
+        </div>
+        <div class="social-links">
+          <span style="width: max-content;">Follow us on</span>
+          <a href="https://www.instagram.com/jainamferro?igsh=MXFubWZhMTR0cm02eQ%3D%3D&utm_source=qr" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/p/1HSMPqjjuC/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-twitter"></i></a> -->
+          <a href="https://www.linkedin.com/in/jainam-ferro-alloys-74723938b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-youtube"></i></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg main-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <!-- <div class="brand-logo">SM</div> -->
+        <img src="./images/OnlyLogo.jpeg" alt="JSA" class="brand-logo logo-img" />
+        <div class="brand-text">
+          <h2>JAINAM FERRO ALLOYS</h2>
+          <p>An ISO 9001:2015 Certified Company</p>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="./index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#about">Company</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#services">Quality</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./productsFilter.html?filter=all">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./certificate.html">Certificate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="products" class="section">
+    <div class="container">
+      <h2 class="section-title">Products</h2>
+      <p class="section-subtitle">Discover our comprehensive range of high-quality flanges and steel products</p>
+  
+      <div class="controls">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search products...">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Products</button>
+          <button class="filter-btn" data-filter="flanges">Flanges</button>
+          <button class="filter-btn" data-filter="Buttweld Fittings">Buttweld Fittings</button>
+          <button class="filter-btn" data-filter="Connectors">Connectors</button>
+          <button class="filter-btn" data-filter="Forged Fittings">Forged Fittings</button>
+          <button class="filter-btn" data-filter="Fasteners">Fasteners</button>
+          <button class="filter-btn" data-filter="REFRACTORY ANCHORS">Refractory Anchors</button>
+          <button class="filter-btn" data-filter="FORGING PRODUCTS">Forging Products</button>
+          <button class="filter-btn" data-filter="GASKETS">Gaskets</button>
+          <button class="filter-btn" data-filter="DESIGNER SHEETS">Designer Sheets</button>
+          <button class="filter-btn" data-filter="SHEETS, PLATES & COILS">Sheets, Plates & Coils</button>
+          <button class="filter-btn" data-filter="RODS AND BARS">Rods and Bars</button>
+          <button class="filter-btn" data-filter="NON FERROUS METALS">Non ferrous metals</button>
+          <button class="filter-btn" data-filter="OTHER">Other</button>
+        </div>
+      </div>
+  
+      <div class="prodcutRow" id="productsGrid">
+        <!-- Products will be loaded here -->
+      </div>
+  
+      <div class="loading" id="loading">
+        <i class="fas fa-spinner"></i>
+        Loading products...
+      </div>
+  
+      <div class="no-results" id="noResults" style="display: none;">
+        <i class="fas fa-search"></i>
+        No products found matching your search criteria
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="navbar-brand mb-3">
+          <!-- <div class="brand-logo"> -->
+          <a href="./index.html">
+            <img src="./images/OnlyLogo.jpeg" alt="JAINAM FERRO ALLOYS Logo" class="brand-logo logo-img" />
+          </a>
+          <!-- </div> -->
+          <div class="brand-text">
+            <h2 style="
+                    color: var(--secondary-color);
+                    font-size: var(--font-size-xl);
+                  ">
+              JAINAM FERRO ALLOYS
+            </h2>
+            <p style="color: rgba(255, 255, 255, 0.8)">
+              An ISO 9001:2015 Certified Company
+            </p>
+          </div>
+        </div>
+        <p style="color: rgba(255, 255, 255, 0.8)">
+          Leading manufacturer of high-quality stainless steel, carbon
+          steel, and alloy steel products. Your trusted partner for
+          precision engineering solutions.
+        </p>
+      </div>
+      <div class="col-lg-1 col-md-6 mb-4">
+        <h5 class="mobileTextCenter">Quick Links</h5>
+        <ul class="footer-links mobileTextCenter">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#about">About Us</a></li>
+          <li><a href="./index.html#services">Quality</a></li>
+          <li><a href="./productsFilter.html?filter=all">Products</a></li>
+          <li><a href="./certificate.html">Certificate</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 mobileTextCenter">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3773.4469631472593!2d72.82571007520241!3d18.95585798222408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDU3JzIxLjEiTiA3MsKwNDknNDEuOCJF!5e0!3m2!1sen!2sin!4v1759170040398!5m2!1sen!2sin"
+          width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <h5 class="mobileTextCenter">Contact Info</h5>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>23, Bhanushali bldg,1st floor, room no:4, 3rd Panjarapole Lane,
+            Near Gulalwadi Circle, Mumbai:400004</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 98209 55550,<br>+91 88793 38852</span>
+
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>sales@jainamferroalloys.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        &copy; 2024 JAINAM FERRO ALLOYS . All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-wrapper" id="whatsappWrapper">
+  <a href="https://wa.me/+919820955550?text=Hello, I am interested in your metal products. Could you please provide more details about your offerings and pricing?" target="_blank" class="whatsapp-float">
+    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" /> -->
+    <img src="./images/Whatsapp-chat-icon-.avif" alt="WhatsApp" />
+  </a>
+</div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
+  <script src="./productsFilter.js"></script>
+</body>
+
+</html>
