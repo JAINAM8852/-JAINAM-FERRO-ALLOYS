@@ -609,6 +609,63 @@ body {
   font-size: var(--font-size-lg);
 }
 
+   .feature-list li {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+      }
+      .feature-list li strong {
+        color: #1a1a1a;
+      }
+
+      .sticky-sidebar {
+        position: sticky;
+        top: 90px; /* adjust based on your header height */
+        align-self: flex-start;
+        padding-top: 20px;
+      }
+
+      .product-link {
+        display: block;
+        background-color: #6a1b9a; /* Blue button like your screenshot */
+        color: #fff;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .product-link:hover {
+        background-color: #d54093;
+        text-decoration: none;
+        color: #fff;
+      }
+      .heading-color {
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        font-weight: 700;
+        color: #6a1b9a;
+      }
+      .h1-heading {
+        color: #d54093;
+        margin-bottom: 2rem;
+      }
+
+      .section-subtext {
+        font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+        line-height: 1.7;
+      }
+
+      .card-title {
+        font-size: clamp(0.9rem, 1.2vw, 1rem);
+        font-weight: 600;
+      }
+
+      p {
+        font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+        line-height: 1.8;
+      }
+
 /* ===== FOOTER ===== */
 .footer {
   background: var(--dark-bg);

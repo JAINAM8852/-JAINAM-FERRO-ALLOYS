@@ -188,7 +188,7 @@ function initContactForm() {
       // Validate form
       if (validateForm(formValues)) {
         // Send using EmailJS
-        console.log("from-->>",formValues)
+        console.log("from-->>", formValues);
         emailjs
           .send("service_tjpxolm", "template_fq38jjg", formValues)
           .then(() => {
@@ -209,7 +209,6 @@ function initContactForm() {
     });
   }
 }
-
 
 // Form validation function
 function validateForm(data) {
@@ -785,7 +784,6 @@ function createMultiImageLightbox(imagesData) {
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", intiCertificate);
 
-
 function initCounters() {
   const counters = document.querySelectorAll("[data-count]");
 
@@ -1003,20 +1001,20 @@ function slide(wrapper, items, prev, next) {
     allowShift = true,
     autoSlideInterval,
     threshold = 100;
-    // threshold = slideSize / 4; // dynamic threshold
+  // threshold = slideSize / 4; // dynamic threshold
 
-     Array.from(slides).forEach((slide) => {
-       slide.style.minWidth = "100%";
-       slide.style.maxWidth = "100%";
-       slide.style.flexShrink = "0";
-     });
+  Array.from(slides).forEach((slide) => {
+    slide.style.minWidth = "100%";
+    slide.style.maxWidth = "100%";
+    slide.style.flexShrink = "0";
+  });
 
   // Clone first and last slide
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
 
   // Set initial position
-   items.style.left = -items.parentElement.offsetWidth + "px";
+  items.style.left = -items.parentElement.offsetWidth + "px";
   wrapper.classList.add("loaded");
 
   // Mouse events
@@ -1044,15 +1042,15 @@ function slide(wrapper, items, prev, next) {
   startAutoSlide();
 
   // Recalculate on resize
- window.addEventListener("resize", () => {
-   slideSize = items.parentElement.offsetWidth; // CHANGE 
-   threshold = 100; // Keep fixed
-   items.style.transition = "none"; // ADD
-   items.style.left = -((index + 1) * slideSize) + "px";
-   setTimeout(() => {
-     items.style.transition = ""; // ADD
-   }, 50);
- });
+  window.addEventListener("resize", () => {
+    slideSize = items.parentElement.offsetWidth; // CHANGE
+    threshold = 100; // Keep fixed
+    items.style.transition = "none"; // ADD
+    items.style.left = -((index + 1) * slideSize) + "px";
+    setTimeout(() => {
+      items.style.transition = ""; // ADD
+    }, 50);
+  });
 
   function dragStart(e) {
     e = e || window.event;
@@ -1226,13 +1224,10 @@ window.addEventListener("resize", () => {
   setPosition(currentPos); // Re-center after resize
 });
 
-
 // Auto slide every 1800ms (adjust as needed)
 setInterval(() => {
   nextSlide();
 }, 1800);
-
-
 
 //------------------------------Product data array----------------------
 // const products = [
@@ -1683,10 +1678,10 @@ const products = [
 ];
 
 // Dynamically render gallery
-const gallery = document.getElementById('productGallery');
-products.forEach(product => {
-  const col = document.createElement('div');
-  col.className = 'col-lg-4 col-md-6';
+const gallery = document.getElementById("productGallery");
+products.forEach((product) => {
+  const col = document.createElement("div");
+  col.className = "col-lg-4 col-md-6";
   col.innerHTML = `
     <div class="gallery-item scroll-animate">
       <a href="productsFilter.html?filter=${product.category}" target="_self">
@@ -1699,7 +1694,6 @@ products.forEach(product => {
 });
 
 // Optional: animation if using scroll-animate, add JS for that.
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");

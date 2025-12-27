@@ -618,7 +618,6 @@ const productsFilter = [
   },
 ];
 
-
 let filteredProducts = [...productsFilter];
 let currentFilter = "flanges";
 
